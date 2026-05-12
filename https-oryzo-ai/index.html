@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PawPing - Interactive Brand Portfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="loader" aria-live="polite">
+      <img src="./assets/source/loader-pawping-logo.webp" alt="PawPing" />
+    </div>
+
+    <canvas id="particle-field" aria-hidden="true"></canvas>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true">
+      <span></span>
+      <img class="progress-dog" src="./assets/source/progress-dog.webp" alt="" />
+    </div>
+
+    <header class="site-header">
+      <a class="brand magnetic" href="#hero" aria-label="PawPing 首页">
+        <img src="./assets/source/dog-head-final.webp" alt="PawPing 狗头 IP" />
+      </a>
+      <nav aria-label="作品集导航">
+        <a href="#story">Story</a>
+        <a href="#system">System</a>
+        <a href="#packaging">Packaging</a>
+        <a href="#media">Media</a>
+        <a href="#character">IP</a>
+      </nav>
+      <button class="sound-toggle magnetic" type="button" aria-pressed="false">声音 OFF</button>
+    </header>
+
+    <main>
+      <section id="hero" class="hero section">
+        <div class="hero-copy reveal">
+          <p class="kicker">Pet lifestyle brand project</p>
+          <h1>PawPing</h1>
+          <p>一个以陪伴、治愈和年轻生活方式为核心的宠物品牌。爪印留痕，爱意无声。</p>
+        </div>
+        <div class="hero-character reveal" data-depth="0.08">
+          <img
+            class="hero-slogan-img"
+            src="./assets/source/slogan-arc.webp"
+            alt="One paw print, one warm moment."
+          />
+          <button class="hero-head-button magnetic" type="button" aria-label="显示 PawPing 英文标语">
+            <img class="hero-dog-head" src="./assets/source/dog-head-final.webp" alt="PawPing 狗头 IP" />
+          </button>
+        </div>
+        <a class="enter-link magnetic" href="#story">Scroll to feel it</a>
+      </section>
+
+      <section id="story" class="story section">
+        <div class="story-copy">
+          <div class="story-text">
+            <p class="kicker reveal">Brand Story</p>
+            <h2 class="line-reveal">把宠物食品用品做成日常快乐符号。</h2>
+            <p class="story-line reveal">
+              PawPing 不是普通货架品牌，而是一种更轻松、更有陪伴感的养宠生活方式。
+            </p>
+            <p class="story-line reveal">
+              苹果与小白狗构成核心记忆点：天然、安心、鲜活，同时带着温柔的情绪价值。
+            </p>
+          </div>
+          <div class="story-scene reveal" aria-hidden="true">
+            <img class="story-apple" src="./assets/source/falling-apple.webp" alt="" loading="lazy" />
+            <img class="story-dog" src="./assets/source/story-standing-dog.webp" alt="" loading="lazy" />
+            <span class="impact-particle" style="--x: -54px; --y: -30px"></span>
+            <span class="impact-particle" style="--x: -34px; --y: -52px"></span>
+            <span class="impact-particle" style="--x: -12px; --y: -42px"></span>
+            <span class="impact-particle" style="--x: 18px; --y: -48px"></span>
+            <span class="impact-particle" style="--x: 44px; --y: -32px"></span>
+            <span class="impact-particle" style="--x: 56px; --y: -8px"></span>
+            <span class="impact-particle" style="--x: -48px; --y: 4px"></span>
+            <span class="impact-particle" style="--x: 20px; --y: 16px"></span>
+          </div>
+        </div>
+        <div class="story-strip character-strip" aria-label="PawPing 角色动作">
+          <img src="./assets/source/dog-apple-story.webp" alt="PawPing 苹果小狗角色" loading="lazy" />
+          <img src="./assets/source/dog-box.webp" alt="PawPing 纸箱小狗角色" loading="lazy" />
+          <img src="./assets/source/dog-brush.webp" alt="PawPing 梳毛小狗角色" loading="lazy" />
+          <img src="./assets/source/dog-running.webp" alt="PawPing 奔跑小狗角色" loading="lazy" />
+        </div>
+      </section>
+
+      <section id="system" class="system section">
+        <div class="section-heading reveal">
+          <p class="kicker">Visual System</p>
+          <h2>统一、鲜明、有 IP 记忆点。</h2>
+        </div>
+        <div class="system-grid">
+          <button class="system-card logo-card logo-story-card construction-card magnetic reveal" type="button" data-modal="source/logo-type-final.webp" data-modal-mode="logo-construction" aria-label="PawPing Logo 构图规范">
+            <img src="./assets/source/logo-type-start.webp" alt="PawPing Logo 字母" loading="lazy" />
+            <span class="card-label">Logo & Type</span>
+          </button>
+          <button class="system-card color-card magnetic reveal" type="button">
+            <b>#3b4de5</b>
+            <span class="card-label">PawPing Blue</span>
+          </button>
+          <button class="system-card color-card red magnetic reveal" type="button">
+            <b>#ff2b2f</b>
+            <span class="card-label">Apple Red</span>
+          </button>
+          <button class="system-card color-card offwhite magnetic reveal" type="button">
+            <b>#fdfeec</b>
+            <span class="card-label">Gentle off-white</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="packaging" class="packaging section">
+        <div class="section-heading reveal">
+          <p class="kicker">Packaging & Products</p>
+          <h2>包装与用品像产品发布一样被慢慢看见。</h2>
+        </div>
+        <div class="horizontal-wrap" aria-label="横向拖拽产品展示">
+          <div class="wheel-hint" aria-hidden="true">
+            <span></span>
+            <b>Hover & wheel to slide</b>
+          </div>
+          <div class="horizontal-track">
+            <article class="product-panel package-hero-panel reveal" data-modal="source/floating-cans.webp" data-modal-mode="floating-cans" role="button" tabindex="0">
+              <img src="./assets/source/package-collection-cover.webp" alt="PawPing 组合包装封面" loading="lazy" />
+              <span>组合包装</span>
+            </article>
+            <article class="product-panel reveal" data-modal="../compressed-assets/pet-bed-detail.webp" role="button" tabindex="0">
+              <img src="./compressed-assets/pet-bed.webp" alt="PawPing 宠物窝" loading="lazy" />
+              <span>宠物窝</span>
+            </article>
+            <article class="product-panel reveal" data-modal="source/pet-cone.webp" role="button" tabindex="0">
+              <img src="./assets/source/pet-cone.webp" alt="PawPing 宠物头套" loading="lazy" />
+              <span>宠物用品</span>
+            </article>
+            <article class="product-panel food-poster-panel reveal" data-modal="source/food-poster.webp" data-modal-mode="food-detail" role="button" tabindex="0">
+              <img src="./assets/source/food-cover-clean.webp" alt="PawPing 精选食材封面" loading="lazy" />
+              <span>精选食材</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="media" class="media section">
+        <div class="section-heading reveal">
+          <p class="kicker">KV / Social Media</p>
+          <h2>海报与社媒视觉形成 PawPing 的生活方式语境。</h2>
+        </div>
+        <div class="poster-pair">
+          <button class="poster-card reveal" type="button" data-modal="../compressed-assets/poster-blue-dog.webp">
+            <img src="./compressed-assets/poster-blue-dog.webp" alt="PawPing 蓝色海报" loading="lazy" />
+          </button>
+          <button class="poster-card reveal" type="button" data-modal="../compressed-assets/poster-woman-dog.webp">
+            <img src="./compressed-assets/poster-woman-dog.webp" alt="PawPing 陪伴海报" loading="lazy" />
+          </button>
+        </div>
+        <div class="social-triptych">
+          <article class="social-phone reveal" data-modal="../compressed-assets/pet-vest-highres.webp" role="button" tabindex="0" aria-label="查看 PawPing 宠物背心社媒视觉">
+            <div class="social-phone-top">
+              <img src="./assets/source/dog-head-final.webp" alt="" loading="lazy" />
+              <span aria-hidden="true">⋮</span>
+            </div>
+            <img class="social-phone-image" src="./compressed-assets/pet-vest-highres.webp" alt="PawPing 宠物背心社媒视觉" loading="lazy" />
+            <div class="social-phone-actions">
+              <button class="heart-button" type="button" aria-label="喜欢"></button>
+              <span class="comment-icon"></span>
+              <span class="send-icon"></span>
+              <span class="bookmark-icon"></span>
+            </div>
+          </article>
+          <article class="social-phone reveal" data-modal="../compressed-assets/social-cans-sky.webp" role="button" tabindex="0" aria-label="查看 PawPing 罐头社媒视觉">
+            <div class="social-phone-top">
+              <img src="./assets/source/dog-head-final.webp" alt="" loading="lazy" />
+              <span aria-hidden="true">⋮</span>
+            </div>
+            <img class="social-phone-image" src="./compressed-assets/social-cans-sky.webp" alt="PawPing 罐头社媒视觉" loading="lazy" />
+            <div class="social-phone-actions">
+              <button class="heart-button" type="button" aria-label="喜欢"></button>
+              <span class="comment-icon"></span>
+              <span class="send-icon"></span>
+              <span class="bookmark-icon"></span>
+            </div>
+          </article>
+          <article class="social-phone reveal" data-modal="source/social-bandana.webp" role="button" tabindex="0" aria-label="查看 PawPing 头巾社媒视觉">
+            <div class="social-phone-top">
+              <img src="./assets/source/dog-head-final.webp" alt="" loading="lazy" />
+              <span aria-hidden="true">⋮</span>
+            </div>
+            <img class="social-phone-image" src="./assets/source/social-bandana.webp" alt="PawPing 头巾社媒视觉" loading="lazy" />
+            <div class="social-phone-actions">
+              <button class="heart-button" type="button" aria-label="喜欢"></button>
+              <span class="comment-icon"></span>
+              <span class="send-icon"></span>
+              <span class="bookmark-icon"></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="character" class="character section">
+        <div class="section-heading reveal">
+          <p class="kicker">IP Character</p>
+          <h2>让小狗 IP 活起来。</h2>
+        </div>
+        <div class="character-stage reveal">
+          <button class="character-button" type="button" aria-label="切换 PawPing 小狗动作">
+            <span class="ribbon-burst" aria-hidden="true"></span>
+            <img src="./assets/source/dog-apple-story.webp" alt="PawPing 小狗互动角色" />
+          </button>
+          <p>点击角色切换动作，鼠标靠近时会轻微跟随。</p>
+        </div>
+      </section>
+
+      <section id="full" class="full-board section">
+        <div class="section-heading reveal">
+          <p class="kicker">完整作品集展示</p>
+          <h2>完整作品集展示</h2>
+        </div>
+        <figure class="board-frame reveal">
+          <img src="./assets/pawping-portfolio-new.jpg" alt="PawPing 完整品牌作品集" loading="lazy" />
+        </figure>
+      </section>
+
+      <section class="ending section">
+        <div class="flower-field" aria-hidden="true"></div>
+        <img class="ending-logo ending-fade" src="./assets/source/dog-head-final.webp" alt="PawPing 狗头 IP" />
+        <p class="ending-tagline">One paw print, one warm moment.</p>
+      </section>
+    </main>
+
+    <div class="modal" role="dialog" aria-modal="true" aria-label="作品细节预览" hidden>
+      <button class="modal-close magnetic" type="button" aria-label="关闭">×</button>
+      <img src="" alt="PawPing 作品细节" />
+      <div class="logo-construction-stage" aria-hidden="true">
+        <img class="logo-build-layer logo-build-logo" src="./assets/source/logo-type-start.webp" alt="" />
+        <img class="logo-build-layer logo-build-guides" src="./assets/source/logo-type-guides.webp" alt="" />
+        <img class="logo-build-layer logo-build-final" src="./assets/source/logo-type-final.webp" alt="" />
+      </div>
+      <div class="food-detail-stage" aria-hidden="true">
+        <img class="food-detail-base" src="./assets/source/food-cover-clean.webp" alt="" />
+        <img class="food-reveal-layer food-reveal-logo" src="./assets/source/food-poster.webp" alt="" />
+        <img class="food-reveal-layer food-reveal-points" src="./assets/source/food-poster.webp" alt="" />
+        <img class="food-reveal-layer food-reveal-selected" src="./assets/source/food-poster.webp" alt="" />
+        <img class="food-reveal-layer food-reveal-quality" src="./assets/source/food-poster.webp" alt="" />
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
